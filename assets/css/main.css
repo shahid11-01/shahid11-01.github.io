@@ -2040,44 +2040,4 @@ input, select, textarea {
 		}
 
 	}
-	@media print {
-    /* hide sidebar nav, social icons, toggle button */
-    #nav,
-    #header footer,
-    #sidebarToggle {
-        display: none !important;
-    }
-
-    /* header flows at the top, photo centered */
-    #header {
-        position: static !important;
-        transform: none !important;
-        width: 100% !important;
-        text-align: center;
-        background: none !important;
-        box-shadow: none !important;
-        padding: 1em 0 !important;
-    }
-    #header .image.avatar img {
-        width: 120px;
-        height: auto;
-        border-radius: 50%;
-    }
-
-    /* make the content fill the page instead of hugging the left */
-    #wrapper {
-        margin: 0 !important;
-        width: 100% !important;
-    }
-    #main {
-        width: 100% !important;
-        max-width: none !important;
-        margin: 0 !important;
-    }
-    .container {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 auto !important;
-        padding: 0 2.5em !important;
-    }
 }
