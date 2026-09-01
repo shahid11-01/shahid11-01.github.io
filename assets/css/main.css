@@ -76,6 +76,9 @@ input, select, textarea {
 	appearance: none;
 }
 
+
+
+
 /* Basic */
 
 	html {
@@ -2037,6 +2040,38 @@ input, select, textarea {
 		}
 
 	}
+	@media print {
+    /* hide sidebar nav, social icons, and the toggle button */
+    #nav,
+    #header footer,
+    #sidebarToggle {
+        display: none !important;
+    }
+
+    /* let the header flow at the top instead of a fixed sidebar */
+    #header {
+        position: static !important;
+        transform: none !important;
+        width: auto !important;
+        background: none !important;
+        box-shadow: none !important;
+        text-align: center;
+        padding: 0 0 1em 0 !important;
+    }
+
+    /* keep the photo, sized nicely */
+    #header .image.avatar img {
+        width: 130px;
+        height: auto;
+        border-radius: 50%;
+    }
+
+    /* content uses full page width */
+    #wrapper {
+        margin-left: 0 !important;
+        width: 100% !important;
+    }
+}
 
 /* XSmall */
 
