@@ -2041,92 +2041,43 @@ input, select, textarea {
 
 	}
 	@media print {
-    /* hide sidebar nav, social icons, and the toggle button */
+    /* hide sidebar nav, social icons, toggle button */
     #nav,
     #header footer,
     #sidebarToggle {
         display: none !important;
     }
 
-    /* let the header flow at the top instead of a fixed sidebar */
+    /* header flows at the top, photo centered */
     #header {
         position: static !important;
         transform: none !important;
-        width: auto !important;
+        width: 100% !important;
+        text-align: center;
         background: none !important;
         box-shadow: none !important;
-        text-align: center;
-        padding: 0 0 1em 0 !important;
+        padding: 1em 0 !important;
     }
-
-    /* keep the photo, sized nicely */
     #header .image.avatar img {
-        width: 130px;
+        width: 120px;
         height: auto;
         border-radius: 50%;
     }
 
-    /* content uses full page width */
+    /* make the content fill the page instead of hugging the left */
     #wrapper {
-        margin-left: 0 !important;
+        margin: 0 !important;
         width: 100% !important;
     }
+    #main {
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 !important;
+    }
+    .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        padding: 0 2.5em !important;
+    }
 }
-
-/* XSmall */
-
-	@media screen and (max-width: 480px) {
-
-		html, body {
-			min-width: 320px;
-		}
-
-		body, input, select, textarea {
-			font-size: 12pt;
-		}
-
-		ul.actions {
-			margin: 0 0 2.25em 0;
-		}
-
-			ul.actions li {
-				display: block;
-				padding: 1.125em 0 0 0;
-				text-align: center;
-				width: 100%;
-			}
-
-				ul.actions li:first-child {
-					padding-top: 0;
-				}
-
-				ul.actions li > * {
-					width: 100%;
-					margin: 0 !important;
-				}
-
-					ul.actions li > *.icon:before {
-						margin-left: -2em;
-					}
-
-			ul.actions.small li {
-				padding: 0.5625em 0 0 0;
-			}
-
-				ul.actions.small li:first-child {
-					padding-top: 0;
-				}
-
-		ul.feature-icons li {
-			display: block;
-			width: 100%;
-		}
-
-		input[type="submit"],
-		input[type="reset"],
-		input[type="button"],
-		.button {
-			padding: 0;
-		}
-
-	}
