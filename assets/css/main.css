@@ -1724,6 +1724,14 @@ input, select, textarea {
 				}
 
 /* XLarge */
+	@media print {
+    #sidebarToggle {
+        display: none !important;
+    }
+    #nav {
+        display: none !important;   /* remove the menu -> no wrong highlight */
+   	 }
+	}
 
 	@media screen and (max-width: 1680px) {
 
