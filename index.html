@@ -5,6 +5,42 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+@media print {
+    /* hide sidebar chrome */
+    #header,
+    #sidebarToggle,
+    #footer {
+        display: none !important;
+    }
+
+    /* reset the whole layout to flow full-width */
+    html, body {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background: #fff !important;
+    }
+    #wrapper,
+    #main,
+    #main > section {
+        position: static !important;
+        float: none !important;
+        left: auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .container {
+        width: 100% !important;
+        max-width: 900px !important;
+        margin: 0 auto !important;
+        padding: 0 2em !important;
+    }
+}
+</style>
 	</head>
 	<body class="is-preload">
 
